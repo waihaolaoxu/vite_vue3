@@ -9,7 +9,10 @@ import HelloWorld from './components/HelloWorld.vue'
     <router-view></router-view>
 </template>
 
-<style>
+<style lang="scss">
+@import "@/assets/css/vant-theme.css";
+@import "@/assets/css/reset.css";
+@import "@/assets/css/public.scss";
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

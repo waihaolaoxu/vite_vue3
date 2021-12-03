@@ -1,0 +1,250 @@
+/*
+ * @Author: qdlaoxu 
+ * @Date: 2021-07-26 17:33:20 
+ * @Last Modified by: mikey.zhaopeng
+ */
+
+/* 浮动 */
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+/* 文本行数限定 */
+.text-nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.text-nowrap2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.text-nowrap3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.text-nowrap4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.text-nowrap10 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+}
+
+/* 文本对齐 */
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+}
+
+/* 文本字号 */
+@for $i from 12 through 50 {
+    .font-#{$i} {
+        font-size: #{$i}px !important;
+    }
+}
+
+/* 文本颜色 */
+.color-logo,
+.active {
+    color: $color-logo !important;
+}
+.color-title {
+    color: $color-title;
+}
+.color-content {
+    color: $color-content;
+}
+.color-info {
+    color: $color-info;
+}
+.color-name {
+    color: $color-name;
+}
+
+/*背景颜色*/
+.bg-color {
+    background-color: $bg-color !important;
+}
+.bg-white {
+    background-color: $bg-white !important;
+}
+
+/* a链接 */
+.a-link {
+    color: #666;
+}
+.a-link:hover {
+    color: $color-logo;
+}
+
+/* margin间距 */
+@for $i from 5 through 50 {
+    .mt#{$i} {
+        margin-top: #{$i}px !important;
+    }
+
+    .ml#{$i} {
+        margin-left: #{$i}px !important;
+    }
+
+    .mr#{$i} {
+        margin-right: #{$i}px !important;
+    }
+
+    .mb#{$i} {
+        margin-bottom: #{$i}px !important;
+    }
+}
+/* padding间距 */
+@for $i from 5 through 50 {
+    .pt#{$i} {
+        padding-top: #{$i}px !important;
+    }
+
+    .pl#{$i} {
+        padding-left: #{$i}px !important;
+    }
+
+    .pr#{$i} {
+        padding-right: #{$i}px !important;
+    }
+
+    .pb#{$i} {
+        padding-bottom: #{$i}px !important;
+    }
+}
+.pb84 {
+    padding-bottom: 84px;
+}
+.pb104 {
+    padding-bottom: 104px;
+}
+.plr15 {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.plr10 {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/*图片显示*/
+img[lazy="loading"] {
+    background: url("~/assets/img/default_logo.png") no-repeat center/25%;
+    background-color: #eaeaea;
+}
+img[lazy="loaded"] {
+    background: unset;
+}
+img[lazy="error"] {
+    background: url("~/assets/img/default_logo.png") no-repeat center/25%;
+    background-color: #eaeaea;
+}
+.img-cover {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+/* flex */
+.flex-xcenter-ycenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-xcenter {
+    display: flex;
+    justify-content: center;
+}
+.flex-ycenter {
+    display: flex;
+    align-items: center;
+}
+
+// 字体
+.font-pfs {
+    font-family: $font-pfs;
+}
+
+.font-pfm {
+    font-family: $font-pfm;
+}
+
+/*阴影*/
+.box-shadow-logo {
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.14);
+}
+
+/*公共btn*/
+.btn-content {
+    padding: 4px 10px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(360deg, rgba(255, 102, 0, 0.52) 0%, #fee8c9 100%);
+    box-shadow: 0px 3px 4px 0px rgba(255, 102, 0, 0.36);
+    border-radius: 22px;
+    font-size: 14px;
+    color: #993d00;
+    margin: 0 auto;
+}
+
+//更多按钮样式
+.btn-more {
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #cccccc;
+    color: $color-title;
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+    i {
+        font-size: 12px;
+        color: #9f9fa6;
+    }
+}
+
+//scroll共公样式
+.scroll-bar {
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+// 左右居中
+.lrauto {
+    margin: 0 auto;
+}
